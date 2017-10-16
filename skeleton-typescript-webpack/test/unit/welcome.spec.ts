@@ -8,7 +8,11 @@ describe('WelcomeComponent', () => {
   beforeEach(async () => {
     component = StageComponent
       .withResources(PLATFORM.moduleName('welcome'))
-      .inView('<welcome></welcome>');
+      .inView('<welcome></welcome>')
+      .boundTo({
+        heading: 'Something else',
+        firstName: 'Peter'
+      })
     await component.create(bootstrap);
   });
 
