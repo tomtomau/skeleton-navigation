@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`WelcomeComponent should render correctly 1`] = `
-"<body><div><welcome class=\\"au-target\\" au-target-id=\\"6\\">
+"<body><div><welcome first-name.bind=\\"firstName\\" class=\\"au-target\\" au-target-id=\\"6\\">
   <section class=\\"au-animate\\">
     <h2>Welcome to the Aurelia Navigation App</h2>
     <form role=\\"form\\" submit.delegate=\\"submit()\\" class=\\"au-target\\" au-target-id=\\"2\\">
@@ -15,7 +15,7 @@ exports[`WelcomeComponent should render correctly 1`] = `
       </div>
       <div class=\\"form-group\\">
         <label>Full Name</label>
-        <p class=\\"help-block\\">JOHN DOE</p>
+        <p class=\\"help-block\\">PETER DOE</p>
       </div>
       <button type=\\"submit\\" class=\\"btn btn-default\\">Submit</button>
     </form>

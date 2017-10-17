@@ -1,8 +1,9 @@
 //import {computedFrom} from 'aurelia-framework';
+import { bindable } from 'aurelia-framework';
 
 export class Welcome {
   heading: string = 'Welcome to the Aurelia Navigation App';
-  firstName: string = 'John';
+  @bindable() firstName: string = 'John';
   lastName: string = 'Doe';
   previousValue: string = this.fullName;
 

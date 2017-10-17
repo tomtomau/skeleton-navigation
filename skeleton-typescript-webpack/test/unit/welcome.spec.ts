@@ -8,7 +8,7 @@ describe('WelcomeComponent', () => {
   beforeEach(async () => {
     component = StageComponent
       .withResources(PLATFORM.moduleName('welcome'))
-      .inView('<welcome></welcome>')
+      .inView('<welcome first-name.bind="firstName"></welcome>')
       .boundTo({
         heading: 'Something else',
         firstName: 'Peter'
@@ -25,7 +25,7 @@ describe('WelcomeComponent', () => {
 
   it('should render first name', () => {
     const nameElement = document.querySelector('#fn') as HTMLInputElement;
-    expect(nameElement.value).toBe('John');
+    expect(nameElement.value).toBe('Peter');
   });
 
   afterEach(() => {
