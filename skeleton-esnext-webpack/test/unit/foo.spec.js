@@ -1,6 +1,7 @@
 import {bootstrap} from 'aurelia-bootstrapper';
 import {StageComponent} from 'aurelia-testing';
 import {PLATFORM} from 'aurelia-pal';
+import { flushQueues } from '../helper/flush-queue';
 
 describe('FooComponent', () => {
   let component;
@@ -28,9 +29,13 @@ describe('FooComponent', () => {
     expect(component.viewModel.bar).toBeFalsy();
   })
 
-  it('clicking on the button should toggle bar', () => {
+  it('clicking on the button should toggle bar', async () => {
     const button = document.querySelector('#button');
     button.click();
+
+    flushQueues();
+    await Promise.resolve();
+
     expect(component.viewModel.bar).toBeTruthy();
 
     // This line fails
